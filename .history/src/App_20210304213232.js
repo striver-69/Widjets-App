@@ -36,32 +36,31 @@ const options=[
 ]
 
 
-// const ShowAccordion=()=>{
-//   if(window.location.pathname === '/'){
-//     return <Accordion items={items}/>
-//   }
-// }
+const ShowAccordion=()=>{
+  if(window.location.pathname === '/'){
+    return <Accordion items={items}/>
+  }
+}
 
-// const ShowList=()=>{
-//   if(window.location.pathname === '/list'){
-//     return <Search/>
-//   }
-// }
+const ShowList=()=>{
+  if(window.location.pathname === '/list'){
+    return <Search/>
+  }
+}
 
-// const showDropdown =()=>{
-//   if(window.location.pathname === '/dropdown'){
-//     return <Dropdown/>
-//   }
-// }
+const showDropdown =()=>{
+  if(window.location.pathname === '/dropdown'){
+    return <Dropdown/>
+  }
+}
 
-// const showTranslate=()=>{
-//   if(window.location.pathname === '/translate'){
-//     return <Translate/>
-//   }
-// }
+const showTranslate=()=>{
+  if(window.location.pathname === '/translate'){
+    return <Translate/>
+  }
+}
 
 export default ()=>{
-  const [selected,setSelected]=useState(options[0])
   return (
     <div>
       <Route path="/">
@@ -71,7 +70,7 @@ export default ()=>{
         <Search/>
       </Route>
       <Route path="/dropdown">
-        <Dropdown label="select a color" options={options} selected={selected} onSelectedChange={setSelected}/>
+        <Dropdown/>
       </Route>
       <Route path="/translate">
         <Translate/>
