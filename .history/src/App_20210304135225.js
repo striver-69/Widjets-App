@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React from 'react'
 import Accordion from './components/Accordion'
 import Search from './components/Search'
 import Dropdown from './components/Dropdown'
@@ -34,15 +34,9 @@ const options=[
 ]
 
 export default ()=>{
-  const [selected,setSelected]=useState(options[0])
-  const [showDropdown,setshowDropdown]=useState(true)
-
   return (
     <div>
-      <button onClick={()=>setshowDropdown(!showDropdown)}>Toggle Dropdown</button>
-      {
-        showDropdown? <Dropdown selected={selected} onSelectedChange={setSelected} options={options}/>:null
-      }
+      <Dropdown/>
     </div>
   )
 }
